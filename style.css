@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+}
+
+header{
+    height: 100px;
+}
+
+.game {
+    display: flex;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.gameBlock {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.redBlock{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    
+}
+.blueBlock{
+    background-color:blue;
+    height: 100px;
+    width: 100px;
+    
+}
+.greenBlock{
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    
+}
+.yellowBlock{
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    
+}
+.orangeBlock{
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+    
+}
+
+footer{
+    height: 100px;
+}
