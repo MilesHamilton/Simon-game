@@ -23,35 +23,30 @@ header{
 
 .redBlock{
     border: red solid 5px;
-    border-radius: 50%;
     height: 100px;
     width: 100px;
 }
 
 .blueBlock{
     border: blue solid 5px;
-    border-radius: 50%;
     height: 100px;
     width: 100px; 
 }
 
 .greenBlock{
     border: green solid 5px;
-    border-radius: 50%;
     height: 100px;
     width: 100px;
 }
 
 .yellowBlock{
     border: yellow solid 5px;
-    border-radius: 50%;
     height: 100px;
     width: 100px;
 }
 
 .orangeBlock{
     border: orange solid 5px;
-    border-radius: 50%;
     height: 100px;
     width: 100px;
 }
