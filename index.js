@@ -1,62 +1,69 @@
 let blocks = document.querySelectorAll('.gameBlock > .block')
-// stores blocks form iterator()
+// stores blocks 
 let generatedSequence = []
-// stores blocks from playerClick()
+// stores blocks from playerSequence
 let playerCreatedSequence = []
 
 
-// iterates through an array of blocks pushes result into player array
-let getRandomBlock = (blocks) => {
+// iterates through an array of blocks pushes result into generated array
+let getRandomBlock = () => {
     // randomly selecting a block from blocks array
-    return blocks[Math.floor(Math.random() * blocks.length)]
+  return blocks[Math.floor(Math.random() * blocks.length)]
 }
-generatedSequence.push(getRandomBlock(blocks))
 
-let addClickEvent = (element) => {
+    // shows background color when div is selected
+ let addActiveClass = () =>{
+   blocks.forEach(element => {
     element.addEventListener('click', ()=>{
-        callAdding()
+        element.classList.toggle('active')
+        setTimeout(() => {
+            element.classList.toggle('active')
+        }, 200);
     })
+       
+   });
+       console.log(blocks)
+ }
+ addActiveClass()
+
+
+
+// player clicks block, block is pushed to new array
+let addClickEvent = () => {
+    blocks.forEach((element, index) => {
+        element.addEventListener('click', () => {
+            playerCreatedSequence.push(element)
+        })
+    })
+    return blocks
 }
-console.log(addEventListener)
+addClickEvent()
 
-let callClickEvent = (blocks) => {
-    blocks.forEach(block => {
-        addEventListener(block)
-    });
+let condition = () => {
+    
 }
-
-// player clicks block, block is pushed to new array, compared, game ends/game continues
-// let playerClicks = () => {
-//     blocks.forEach((element, index) => {
-//         element.addEventListener('click', () => {
-//             playerArray.push(element)
-//             if (playerArray[index] === compArray[index]) {
-//                 iterator()
-//             }
-//         })
-
-//     })
-//     return blocks
-// }
-// playerClicks()
 
 // checks every item in an array 
-let incrementor = (array, delegate, delay) => {
-    let i = 0
+// let incrementor = (array, delegate, delay) => {
+//     let i = 0
 
-    function loop() {
-        // each loop, call passed in function
-        delegate(array[i]);
+//     function loop() {
+//         // each loop, call passed in function
+//         delegate(array[i]);
 
-        // increment, and if we're still here, call again
-        if (i++ < array.length - 1)
-            setTimeout(loop, delay); //recursive
-    }
+//         // increment, and if we're still here, call again
+//         if(generatedSequence.length === playerCreatedSequence.length){
+            
+//         }
+//         if (i++ < array.length - 1)
+//             setTimeout(loop, delay); //recursive
+//     }
 
-    // seed first call
-    setTimeout(loop, delay);
-}
-//   incrementor(compArray, iterator(), 2000)
+//     // seed first call
+//     setTimeout(loop, delay);
+// }
+// incrementor(generatedSequence, console.log(generatedSequence.push(getRandomBlock(blocks))), 2000)
+  
 
 
 console.log(generatedSequence)

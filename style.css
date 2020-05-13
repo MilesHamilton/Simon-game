@@ -27,10 +27,18 @@ header{
     width: 100px;
 }
 
+ .block.redBlock.active{
+ background-color: red;
+}
+
 .blueBlock{
     border: blue solid 5px;
     height: 100px;
     width: 100px; 
+}
+
+.block.blueBlock.active{
+    background-color: blue;
 }
 
 .greenBlock{
@@ -39,16 +47,30 @@ header{
     width: 100px;
 }
 
+.block.greenBlock.active{
+    background-color: green;
+}
+
 .yellowBlock{
     border: yellow solid 5px;
     height: 100px;
     width: 100px;
 }
 
+
+.block.yellowBlock.active{
+    background-color: yellow;
+}
+
 .orangeBlock{
     border: orange solid 5px;
     height: 100px;
     width: 100px;
+}
+
+
+.block.orangeBlock.active{
+    background-color: orange;
 }
 
 footer{
