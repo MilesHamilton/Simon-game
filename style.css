@@ -22,34 +22,38 @@ header{
 
 
 .redBlock{
-    background-color: red;
+    border: red solid 5px;
+    border-radius: 50%;
     height: 100px;
     width: 100px;
-    
 }
+
 .blueBlock{
-    background-color:blue;
+    border: blue solid 5px;
+    border-radius: 50%;
     height: 100px;
-    width: 100px;
-    
+    width: 100px; 
 }
+
 .greenBlock{
-    background-color: green;
+    border: green solid 5px;
+    border-radius: 50%;
     height: 100px;
     width: 100px;
-    
 }
+
 .yellowBlock{
-    background-color: yellow;
+    border: yellow solid 5px;
+    border-radius: 50%;
     height: 100px;
     width: 100px;
-    
 }
+
 .orangeBlock{
-    background-color: orange;
+    border: orange solid 5px;
+    border-radius: 50%;
     height: 100px;
     width: 100px;
-    
 }
 
 footer{

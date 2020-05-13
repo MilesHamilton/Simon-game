@@ -7,32 +7,24 @@ let playerArray = []
 let iterator = () => {
     let randomBlocks = blocks[Math.floor(Math.random() * blocks.length)]
     compArray.push(randomBlocks)
-    return randomBlocks 
+    return randomBlocks
 } 
+iterator()
 
 let playerClicks = () => {
     blocks.forEach((element, index) => {
         element.addEventListener('click', ()=>{
             playerArray.push(element)
+            if(playerArray[0] === compArray[0]){
+                placeholderfunction
+            }
         })
 
-    })
+    }) 
+    return blocks
 }
-console.log(playerClicks())
+playerClicks()
 console.log(compArray)
 console.log(playerArray)
 
-
-// let playerTurn = () => {
-//     blocks.forEach(element => {
-//        element.addEventListener('click', ()=>{
-//         if(playerArray[0] === ) {
-
-
-//         }
-
-//     });
-//     })
-
-// }
 
