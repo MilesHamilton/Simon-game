@@ -8,14 +8,14 @@ let playerCreatedSequence = []
 // iterates through an array of blocks pushes result into generated array
 let getRandomBlock = () => {
     // randomly selecting a block from blocks array
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
     generatedSequence.push(blocks[Math.floor(Math.random() * blocks.length)])
     blocks.forEach( (block)=>{
-        block.classList.toggle('active')
         
     })
 }}
-getRandomBlock()
+
+
 
 
 console.log(blocks)
@@ -51,50 +51,52 @@ let addClickEvent = () => {
 }
 addClickEvent()
 
-
-
-
-
-
-// checks every item in an array 
-// let incrementor = (array, delegate, delay) => {
+// let increaseSequence = () =>{
+    
 //     let i = 0
-
-//     function loop() {
-//         // each loop, call passed in function
-//         delegate(array[i]);
-
-//         // increment, and if we're still here, call again
-//         delegate(array[i])
+//     generatedSequence[i]
+//         setInterval(() => {
+//         if (i >= generatedSequence.length) {
+//             generatedSequence[i++]
+//             clearInterval
             
-//         if (i++ < array.length - 1)
-//             setTimeout(loop, delay); //recursive
-//     }
+//         }
 
-//     // seed first call
-//     setTimeout(loop, delay);
+//     }, 1000);
 // }
-// incrementor(generatedSequence, function(obj) {console.log(obj)}, 2000)
-  
+// increaseSequence()
 
-let gameLoop = () => {
-    let i = 0
-
-    //termination 
-    
-        
-
-
-
-    //base
-
-
-    //recursion
-      
-
-    
-
+// adds random block im intervals to an array 
+increaseSequence = () => {
+    getRandomBlock()
+    let i= 0
+    generatedSequence.forEach(element => {
+        element.addEventListener('click', () => {
+            if(generatedSequence[i]===playerCreatedSequence[0]) {
+                element.classList.toggle('active')
+                setTimeout(() => {
+                    element.classList.toggle('active')
+                }, 200);
+                setInterval(() => {
+                
+                    
+                    
+                }, 1000);
+            }
+        })
+    })
 }
+
+increaseSequence()
+
+
+let gameLoop = () =>{
+ 
+}
+
+    
+
+
 
 
 //gameLoop 
