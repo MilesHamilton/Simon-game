@@ -8,10 +8,20 @@ let playerCreatedSequence = []
 // iterates through an array of blocks pushes result into generated array
 let getRandomBlock = () => {
     // randomly selecting a block from blocks array
-  return blocks[Math.floor(Math.random() * blocks.length)]
-}
+    for (let i = 0; i < 20; i++) {
+    generatedSequence.push(blocks[Math.floor(Math.random() * blocks.length)])
+    blocks.forEach( (block)=>{
+        block.classList.toggle('active')
+        
+    })
+}}
+getRandomBlock()
 
-    // shows background color when div is selected
+
+console.log(blocks)
+
+
+    // shows background color when div is clicked
  let addActiveClass = () =>{
    blocks.forEach(element => {
     element.addEventListener('click', ()=>{
@@ -22,16 +32,18 @@ let getRandomBlock = () => {
     })
        
    });
-       console.log(blocks)
+       
  }
  addActiveClass()
-
 
 
 // player clicks block, block is pushed to new array
 let addClickEvent = () => {
     blocks.forEach((element, index) => {
         element.addEventListener('click', () => {
+            if(playerCreatedSequence.length = 1){
+                playerCreatedSequence.shift()
+            }
             playerCreatedSequence.push(element)
         })
     })
@@ -39,9 +51,10 @@ let addClickEvent = () => {
 }
 addClickEvent()
 
-let condition = () => {
-    
-}
+
+
+
+
 
 // checks every item in an array 
 // let incrementor = (array, delegate, delay) => {
@@ -52,9 +65,8 @@ let condition = () => {
 //         delegate(array[i]);
 
 //         // increment, and if we're still here, call again
-//         if(generatedSequence.length === playerCreatedSequence.length){
+//         delegate(array[i])
             
-//         }
 //         if (i++ < array.length - 1)
 //             setTimeout(loop, delay); //recursive
 //     }
@@ -62,8 +74,32 @@ let condition = () => {
 //     // seed first call
 //     setTimeout(loop, delay);
 // }
-// incrementor(generatedSequence, console.log(generatedSequence.push(getRandomBlock(blocks))), 2000)
+// incrementor(generatedSequence, function(obj) {console.log(obj)}, 2000)
   
+
+let gameLoop = () => {
+    let i = 0
+
+    //termination 
+    
+        
+
+
+
+    //base
+
+
+    //recursion
+      
+
+    
+
+}
+
+
+//gameLoop 
+// computer function create 20+n random blocks, flash for each block, push to generated sequence array 
+// player function event listener input, compare to generated sequence index, if pass +1 scorewin if lose gameover, computer function array ++ 
 
 
 console.log(generatedSequence)

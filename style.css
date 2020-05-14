@@ -25,6 +25,7 @@ header{
     border: red solid 5px;
     height: 100px;
     width: 100px;
+    border-radius: 50%;
 }
 
  .block.redBlock.active{
@@ -35,6 +36,7 @@ header{
     border: blue solid 5px;
     height: 100px;
     width: 100px; 
+    border-radius: 50%;
 }
 
 .block.blueBlock.active{
@@ -45,6 +47,7 @@ header{
     border: green solid 5px;
     height: 100px;
     width: 100px;
+    border-radius: 50%;
 }
 
 .block.greenBlock.active{
@@ -55,6 +58,7 @@ header{
     border: yellow solid 5px;
     height: 100px;
     width: 100px;
+    border-radius: 50%;
 }
 
 
@@ -66,6 +70,7 @@ header{
     border: orange solid 5px;
     height: 100px;
     width: 100px;
+    border-radius: 50%;
 }
 
 
