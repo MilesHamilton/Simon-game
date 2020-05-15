@@ -1,27 +1,25 @@
 // grab blocks
 let blocks = document.querySelectorAll('.block')
+let start = document.querySelector('.start')
+let score = document.querySelector('.score')
 
 let sequence = []
 let playerSequence = []
 
-blocks.forEach(element => {
-    element.addEventListener('click', () => {
-        element.classList.toggle('active')
-        setTimeout(() => {
+highlightClick = () => {
+    blocks.forEach(element => {
+        element.addEventListener('click', () => {
             element.classList.toggle('active')
-        }, 200)
-        playerSequence.push(element)
+            setTimeout(() => {
+                element.classList.toggle('active')
+            }, 200)
+            playerSequence.push(element)
 
+        })
     })
-})
-
-createPlayerSequence = () => {
-    playerSequence.push(blocks)
-    if (playerSequence.length = 1) {
-        playerSequence.shift()
-    }
 }
-createPlayerSequence()
+highlightClick()
+
 
 console.log(playerSequence)
 
@@ -31,42 +29,47 @@ let generateSequence = () => {
     }
 }
 
-let gameStart = () => {
-
+// start game button, highlights initial block (sequence[0])
+let startGame = () => {
+    generateSequence()
+    sequence[0].classList.toggle('active')
+    setTimeout(() => {
+        sequence[0].classList.toggle('active')
+    }, 300)
 }
+
+// creates a round if comparison is correct
+let check = () => {
+   
+}
+
+
+startGame()
+// runs through array and compares at each index after click
+let gameloop = () => {
+    let i = 0
+    if (sequence[i] === playerSequence[i]) {
+        i++
+        score.innerText = i
+        sequence[i].classList.toggle('active')
+        setTimeout(() => {
+            sequence[i].classList.toggle('active')
+        }, 500)
+    }
+}
+// gameloop()
+// let interval = setInterval(gameloop, 1000)
+// clearInterval(interval)
+
+
+
+
+clearGame = () => {
+    sequence = []
+    generatedSequence = []
+    score.innerText = 0
+}
+
+start.addEventListener('click', gameloop)
 
 console.log(sequence)
-
-
-// simonSays = () => {
-//      sequence[0].classList.toggle('active')
-//     setTimeout(()=>{
-//         sequence[0].classList.toggle('active')
-//     }, 600)
-//     return sequence[0]
-// }
-
-
-
-
-
-let playerStarts = () => {
-    let i = 0
-    generateSequence()
-    sequence.forEach(element => {
-        element.addEventListener('click', () => {
-            setInterval(() => {
-                if (sequence[i] === playerSequence[i]) {
-                    i++
-                    sequence[i].classList.toggle('active')
-                    setTimeout(() => {
-                        sequence[i].classList.toggle('active')
-                    }, 600)
-                } else {
-                    console.log('gameover')
-                }
-            }, 2000)
-        })
-    });
-}
-playerStarts()
